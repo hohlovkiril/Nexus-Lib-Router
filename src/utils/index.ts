@@ -1,1 +1,5 @@
-export { default } from './parseRoutesPathnames'
+import parseRoutesPathnames from './parseRoutesPathnames'
+
+export {
+  parseRoutesPathnames,
+}
