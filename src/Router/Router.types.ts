@@ -3,7 +3,7 @@ import React from 'react';
 export type RouteConfig = {
   index?: true;
   helmet?: any,
-  breadcrumb?: {
+  breadcrumb: {
     label: string;
     icon?: React.ReactNode;
   },
@@ -19,6 +19,7 @@ export type NestedRouterProps = {
 export type RouterProps = {
   routes: RouteConfig[];
   layout?: React.ElementType;
+  onParseRoutesPathnamesMap?: (breadcrumbs: RoutesPathnamesMap) => void;
 }
 
 export type RoutesPathnamesMap = {

@@ -1,6 +1,6 @@
 import { RouteConfig, RoutesPathnamesMap } from "../Router";
 
-export default function parseRoutesPathnames(
+export function parseRoutesPathnames(
   pathnames: RoutesPathnamesMap,
   routes: RouteConfig[],
   parentPath?: string,

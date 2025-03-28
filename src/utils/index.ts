@@ -1,5 +1,1 @@
-import parseRoutesPathnames from './parseRoutesPathnames'
-
-export {
-  parseRoutesPathnames,
-}
+export { parseRoutesPathnames } from './parseRoutesPathnames'
