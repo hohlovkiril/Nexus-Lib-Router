@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { RouterProps, RoutesPathnamesMap } from "./Router.types";
 import { NestedRouter } from "./NestedRouter";
-import { parseRoutesPathnames } from "utils";
+import { parseRoutesPathnames } from "../utils";
 
 export const Router: React.FC<RouterProps> = (props) => {
   const { layout: Component, routes } = props;
@@ -12,9 +12,11 @@ export const Router: React.FC<RouterProps> = (props) => {
 
     parseRoutesPathnames(routesPathnames, routes);
 
-    props.onParseRoutesPathnamesMap(routesPathnames);
+    if (props.onParseRoutesPathnamesMap) {
+      props.onParseRoutesPathnamesMap(routesPathnames);
+    }
   }, [
-    
+    props,
   ])
   
   return (
